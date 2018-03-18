@@ -7,6 +7,7 @@ Samples for using go
 [reference items from other file but within the same package](lib1)  
 
 Interface in go looks a bit different to other languages. For detailed usage, please refer to [learnig_interface](learn_interface)  
+
 To run the app, there are two ways:  
 
     go run *.go
