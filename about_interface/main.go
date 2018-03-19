@@ -17,6 +17,8 @@ func main() {
 	dog := Dog{ID: "2323223"}
 
 	LetUsWalk(&dog)
+
+	WhoCanWalk(&dog)
 }
 
 type Animal interface {
@@ -35,3 +37,15 @@ func LetUsWalk(animal Animal) {
 	animal.Walk()
 }
 
+func WhoCanWalk(who interface{}) {
+	switch who.(type) { // this form can only be used with switch to query the interface
+	case Animal:
+		fmt.Println("it is animal")
+	default:
+		fmt.Println("not found")
+	}
+
+	if animal, ok := who.(Animal); ok { //query the Animal interface
+		animal.Walk()
+	}
+}
