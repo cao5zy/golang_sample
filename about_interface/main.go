@@ -16,7 +16,7 @@ func main() {
 
 	dog := Dog{ID: "2323223"}
 
-	WhoCanWalk(&dog)
+	LetUsWalk(&dog)
 }
 
 type Animal interface {
@@ -31,6 +31,7 @@ func (d *Dog) Walk() {
 	fmt.Println("dog can walk", d.ID)
 }
 
-func WhoCanWalk(animal Animal) {
+func LetUsWalk(animal Animal) {
 	animal.Walk()
 }
+
